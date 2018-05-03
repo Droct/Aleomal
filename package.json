@@ -4,12 +4,16 @@
   "description": "Nobody Gives a Shit",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "node-sass style.scss style.css -w"
   },
   "repository": {
     "type": "git",
     "url": "\u0016https://github.com/Droct/WhoCares.git"
   },
   "author": "Avinash Ashwik",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.0"
+  }
 }
