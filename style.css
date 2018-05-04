@@ -1,2 +1,54 @@
+html {
+  font-size: 62.2%;
+  text-transform: uppercase; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: lato;
+  box-sizing: border-box; }
+
 .navbar {
-  color: red; }
+  background-image: linear-gradient(to right, rgba(24, 7, 179, 0.596), rgba(18, 219, 11, 0.692));
+  height: 12vh;
+  width: 100%;
+  border: 3px solid black;
+  position: relative; }
+  .navbar #logo {
+    width: 5rem;
+    height: 5rem;
+    left: 5rem;
+    top: 1rem;
+    position: relative; }
+  .navbar ul {
+    position: absolute;
+    bottom: 1rem;
+    left: 47%;
+    width: 70vw; }
+    .navbar ul #sign-up {
+      color: lime;
+      font-family: "Open Sans", sans-serif;
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-left: 20px;
+      background-color: rgba(0, 2, 3, 0.623);
+      border: 1px solid black; }
+      .navbar ul #sign-up:hover {
+        background-color: #353535; }
+      .navbar ul #sign-up:active {
+        color: blue; }
+  .navbar a {
+    margin-right: 5rem;
+    font-size: 2.5rem;
+    padding: 0.8rem;
+    color: #cee219;
+    border-radius: 0.5rem; }
+    .navbar a:hover {
+      background-color: #353535;
+      border: 0.2px solid silver; }
+
+@media only screen and (max-width: 1100px) {
+  body {
+    background-color: lightblue; }
+  .navbar ul a {
+    font-size: 15px; } }
