@@ -1,72 +1,115 @@
 $greyish: rgb(53, 53, 53);
+$black: black;
+$white: white;
+$aqua: aqua;
 html {
-  font-size: 62.2%;
-  text-transform: uppercase;
+    font-size: 62.2%;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: lato;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: lato;
+    box-sizing: border-box;
 }
 
-.navbar {
-  background-image: linear-gradient(
-    to right,
-    rgba(24, 7, 179, 0.596),
-    rgba(18, 219, 11, 0.692)
-  );
-  height: 12vh;
-  width: 100%;
-  border: 3px solid black; // overflow: hidden;
-  position: relative; //display: block;
-  #logo {
-    width: 5rem;
-    height: 5rem;
-    left: 5rem;
-    top: 1rem;
-    position: relative;
-  }
-  ul {
-    position: absolute;
-    bottom: 1rem;
-    left: 47%;
-    width: 70vw;
-    #sign-up {
-      color: rgb(0, 255, 0);
-      font-family: "Open Sans", sans-serif;
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-left: 20px;
-      background-color: rgba(0, 2, 3, 0.623);
-      border: 1px solid black;
-      &:hover {
-        background-color: $greyish;
-      }
-      &:active {
-        color: blue;
-      }
+.navbar-header {
+    background-image: linear-gradient( to right, rgba(24, 7, 179, 0.596), rgba(18, 219, 11, 0.692));
+    height: 12vh;
+    border: 3px solid $black; // overflow: hidden;
+    position: relative; //display: block;
+    text-transform: uppercase;
+    #logo {
+        width: 5rem;
+        height: 5rem;
+        left: 5rem;
+        top: 1rem;
+        position: relative;
     }
-  }
-  a {
+    .header-navbar {
+        position: absolute;
+        bottom: 1rem;
+        left: 47%;
+        #sign-up {
+            color: rgb(0, 255, 0);
+            font-family: "Open Sans", sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-left: 20px;
+            background-color: $greyish;
+            border: 1px solid $aqua;
+            &:hover {
+                background-color: rgba(0, 0, 0, 0.842);
+                border: 1px solid silver;
+                color: yellowgreen;
+            }
+        }
+    }
+}
+
+.header-nav {
     margin-right: 5rem;
     font-size: 2.5rem;
     padding: 0.8rem;
     color: rgb(206, 226, 25);
     border-radius: 0.5rem;
     &:hover {
-      background-color: $greyish;
-      border: 0.2px solid silver;
+        background-color: #353535;
+        border: 0.2px solid silver;
     }
-  }
 }
 
+
+
+;
+a:active {
+    color: violet;
+}
+
+;
 @media only screen and (max-width: 1100px) {
-  body {
-    background-color: lightblue;
-  }
-  .navbar ul a {
-    font-size: 15px;
-  }
+    body {
+        background-color: lightblue;
+    }
+    .navbar-header .header-navbar .header-nav {
+        font-size: 15px;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    h1 {
+        position: absolute;
+        left: 40%;
+        font-size: 4rem;
+        color: $black;
+    }
+}
+
+.navbar-footer {
+    border: 1px solid $black;
+    height: 70px;
+    background-image: linear-gradient( to left, rgba(24, 7, 179, 0.596), rgba(18, 219, 11, 0.692));
+    position: relative;
+    .footer-links {
+        font-size: 1.5rem;
+        left: 100px;
+        margin-top: 25px;
+        .footer-nav {
+            color: $white;
+            letter-spacing: 1px;
+            display: inline;
+            margin-left: 30px;
+        }
+        .modifier {
+            font-size: 1.2rem;
+            margin-left: 120px;
+            text-transform: uppercase;
+            &:hover {
+                color: $aqua;
+            }
+        }
+    }
 }
