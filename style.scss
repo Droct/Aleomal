@@ -16,7 +16,7 @@ body {
 .navbar-header {
     background-image: linear-gradient( to right, rgba(24, 7, 179, 0.596), rgba(18, 219, 11, 0.692));
     height: 12vh;
-    border: 3px solid $black; // overflow: hidden;
+    border: 1px solid $black; // overflow: hidden;
     position: relative; //display: block;
     text-transform: uppercase;
     #logo {
@@ -51,22 +51,18 @@ body {
     margin-right: 5rem;
     font-size: 2.5rem;
     padding: 0.8rem;
-    color: rgb(206, 226, 25);
+    color: gold;
     border-radius: 0.5rem;
+    text-decoration: none;
     &:hover {
         background-color: #353535;
         border: 0.2px solid silver;
     }
+    &:active {
+        color: $white;
+    }
 }
 
-
-
-;
-a:active {
-    color: violet;
-}
-
-;
 @media only screen and (max-width: 1100px) {
     body {
         background-color: lightblue;
@@ -82,9 +78,85 @@ a:active {
     position: relative;
     h1 {
         position: absolute;
-        left: 40%;
-        font-size: 4rem;
-        color: $black;
+        left: 32%;
+        top: 16%;
+        font-size: 6rem;
+        color: $white;
+        text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+    }
+    #universe {
+        left: 23%;
+        position: absolute;
+        animation: slide 4s;
+    }
+    #aleo {
+        color: gold;
+        animation: blink 2s;
+    }
+}
+
+@keyframes blink {
+    0% {
+        color: gold;
+    }
+    80% {
+        color: rgba(255, 174, 0, 0.986);
+    }
+    100% {
+        color: gold;
+    }
+}
+
+.login {
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    button {
+        border: 1px solid violet;
+        padding: 5px;
+        font-size: 3.5rem;
+        border-radius: 1rem;
+        color: $white;
+        background-color: rgba(78, 221, 50, 0.568);
+        &:hover {
+            background-color: rgba(78, 221, 50, 0.973);
+        }
+    }
+}
+
+.signup {
+    position: absolute;
+    top: 80%;
+    left: 53%;
+    button {
+        border: 1px solid violet;
+        padding: 5px;
+        font-size: 3.5rem;
+        border-radius: 1rem;
+        color: $white;
+        background-color: rgba(78, 221, 50, 0.568);
+        &:hover {
+            background-color: rgba(78, 221, 50, 0.973);
+        }
+    }
+}
+
+.container-home {
+    background-image: linear-gradient( to bottom right, rgba(24, 7, 179, 0.507), rgba(18, 219, 11, 0.507)), url("images/home-background.jpg");
+    background-size: cover;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    80% {
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
 }
 
@@ -102,6 +174,8 @@ a:active {
             letter-spacing: 1px;
             display: inline;
             margin-left: 30px;
+            text-decoration: none;
+            word-spacing: 1px;
         }
         .modifier {
             font-size: 1.2rem;
@@ -109,6 +183,9 @@ a:active {
             text-transform: uppercase;
             &:hover {
                 color: $aqua;
+            }
+            &:active {
+                color: purple;
             }
         }
     }

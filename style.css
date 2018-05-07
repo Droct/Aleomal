@@ -10,7 +10,7 @@ body {
 .navbar-header {
   background-image: linear-gradient(to right, rgba(24, 7, 179, 0.596), rgba(18, 219, 11, 0.692));
   height: 12vh;
-  border: 3px solid black;
+  border: 1px solid black;
   position: relative;
   text-transform: uppercase; }
   .navbar-header #logo {
@@ -40,14 +40,14 @@ body {
   margin-right: 5rem;
   font-size: 2.5rem;
   padding: 0.8rem;
-  color: #cee219;
-  border-radius: 0.5rem; }
+  color: gold;
+  border-radius: 0.5rem;
+  text-decoration: none; }
   .header-nav:hover {
     background-color: #353535;
     border: 0.2px solid silver; }
-
-a:active {
-  color: violet; }
+  .header-nav:active {
+    color: white; }
 
 @media only screen and (max-width: 1100px) {
   body {
@@ -61,9 +61,68 @@ a:active {
   position: relative; }
   .container h1 {
     position: absolute;
-    left: 40%;
-    font-size: 4rem;
-    color: black; }
+    left: 32%;
+    top: 16%;
+    font-size: 6rem;
+    color: white;
+    text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black; }
+  .container #universe {
+    left: 23%;
+    position: absolute;
+    animation: slide 4s; }
+  .container #aleo {
+    color: gold;
+    animation: blink 2s; }
+
+@keyframes blink {
+  0% {
+    color: gold; }
+  80% {
+    color: rgba(255, 174, 0, 0.986); }
+  100% {
+    color: gold; } }
+
+.login {
+  position: absolute;
+  top: 80%;
+  left: 40%; }
+  .login button {
+    border: 1px solid violet;
+    padding: 5px;
+    font-size: 3.5rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: rgba(78, 221, 50, 0.568); }
+    .login button:hover {
+      background-color: rgba(78, 221, 50, 0.973); }
+
+.signup {
+  position: absolute;
+  top: 80%;
+  left: 53%; }
+  .signup button {
+    border: 1px solid violet;
+    padding: 5px;
+    font-size: 3.5rem;
+    border-radius: 1rem;
+    color: white;
+    background-color: rgba(78, 221, 50, 0.568); }
+    .signup button:hover {
+      background-color: rgba(78, 221, 50, 0.973); }
+
+.container-home {
+  background-image: linear-gradient(to bottom right, rgba(24, 7, 179, 0.507), rgba(18, 219, 11, 0.507)), url("images/home-background.jpg");
+  background-size: cover; }
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 .navbar-footer {
   border: 1px solid black;
@@ -78,10 +137,14 @@ a:active {
       color: white;
       letter-spacing: 1px;
       display: inline;
-      margin-left: 30px; }
+      margin-left: 30px;
+      text-decoration: none;
+      word-spacing: 1px; }
     .navbar-footer .footer-links .modifier {
       font-size: 1.2rem;
       margin-left: 120px;
       text-transform: uppercase; }
       .navbar-footer .footer-links .modifier:hover {
         color: aqua; }
+      .navbar-footer .footer-links .modifier:active {
+        color: purple; }
